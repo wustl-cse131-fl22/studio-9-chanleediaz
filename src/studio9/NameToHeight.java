@@ -19,9 +19,16 @@ public class NameToHeight {
 	 */
 	public static void main(String[] args) {
 		Scanner in = new Scanner(System.in);
-
-		// FIXME
-		throw new NotYetImplementedException();
-
+		
+		
+		Map<String, Integer> dataBase = new HashMap<String,Integer>();
+		
+		dataBase.put("Randy", 166);
+		while(!in.next().equals("quit")) {
+			String name = in.next();
+			if(dataBase.getOrDefault(name, null) != null) {
+				System.out.print("Name: " + name +" Heigh: "+ dataBase.get(name));
+			}
+		}
 	}
 }
